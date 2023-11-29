@@ -78,4 +78,11 @@
 
 .linksBox {
     border-top: 1px solid silver;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.linksBox div a {
+    color: #fff;
 }
