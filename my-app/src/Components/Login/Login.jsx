@@ -13,17 +13,15 @@ const Login = () => {
             <form className={styles.form} onSubmit={submitHandler}>
                 <h1>Login</h1>
                 <div className={styles.formField}>
-                    <label>Username</label>
-                    <input type="text" />
+                    <input type="text" placeholder="Username" />
                 </div>
                 <div className={styles.formField}>
-                    <label>Password</label>
-                    <input type="password" />
+                    <input type="password" placeholder="Password" />
                 </div>
                 <div className={styles.buttonContainer}>
                     <button type="submit">Login</button>
                 </div>
-                <div>
+                <div className={styles.linksBox}>
                     <div>
                         Don't have an account? <a href='#'>Sign up here!</a>
                     </div>
