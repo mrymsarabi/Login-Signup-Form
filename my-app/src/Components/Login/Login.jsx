@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 //CSS:
 import styles from "/src/Components/Login/Login.module.css";
 
 const Login = () => {
+    //States:
+    const [data, setData] = useState({
+        userName: "",
+        password: "",
+    });
+
+    //Functions:
+    //Handling Input changes
+    const changeHandler = (event) => {
+        setData({...data, [event.target.name]: event.target.value});
+    }
+
+    //Submitting form handler function
     const submitHandler = () => {
 
     };
@@ -13,10 +26,22 @@ const Login = () => {
             <form className={styles.form} onSubmit={submitHandler}>
                 <h1>Login</h1>
                 <div className={styles.formField}>
-                    <input type="text" placeholder="Username" />
+                    <input 
+                        type="text" 
+                        placeholder="Username" 
+                        name="userName"
+                        value={data.userName}
+                        onChange={changeHandler}
+                    />
                 </div>
                 <div className={styles.formField}>
-                    <input type="password" placeholder="Password" />
+                    <input 
+                        type="password" 
+                        placeholder="Password" 
+                        name="password"
+                        value={data.password}
+                        onChange={changeHandler}
+                    />
                 </div>
                 <div className={styles.buttonContainer}>
                     <button type="submit">Login</button>
