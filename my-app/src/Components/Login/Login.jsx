@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 //CSS:
-import styles from "/src/Components/Login/Login.module.css";
+import styles from "/src/Components/Login.module.css";
 
 const Login = () => {
     //States:
